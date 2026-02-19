@@ -1,0 +1,35 @@
+
+  .pet-card {
+  font-family: sans-serif;
+  border: 2px solid #333;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 15px;
+  background: #f9f9f9;
+}
+
+.health-bar-container {
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.health-bar {
+  background: #4caf50;
+  height: 100%;
+  width: 100%; /* Starts full */
+  transition: width 0.3s ease;
+}
+
+.controls button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background: #2196f3;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,50 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 350px;
+}
+
+.search-box input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+}
+
+.search-button {
+    padding: 10px;
+    cursor: pointer;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.weather-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    border-radius: 10px;
+}
+
+.temp-container {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hidden { display: none; }
+.error { color: #ff6b6b; margin-top: 10px; }

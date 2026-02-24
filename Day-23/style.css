@@ -1,0 +1,110 @@
+:root {
+  --bg-dark: #121212;
+  --card-bg: #181818;
+  --accent-gradient: linear-gradient(135deg, #e67e22, #c0392b);
+  --text-main: #ffffff;
+  --text-muted: #b3b3b3;
+  --success-green: #2ecc71;
+}
+
+body {
+  background-color: var(--bg-dark);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background-color: var(--card-bg);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Header Styles */
+.card-header {
+  background: var(--accent-gradient);
+  padding: 30px 40px;
+  color: white;
+}
+
+.badge-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-outline {
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
+}
+
+.badge-solid {
+  background: rgba(255,255,255,0.2);
+}
+
+.card-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.card-header p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Body Styles */
+.card-body {
+  padding: 30px 40px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.objective-list {
+  list-style: none;
+  padding: 0;
+}
+
+.objective-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: var(--text-main);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.check-mark {
+  color: var(--success-green);
+  font-weight: bold;
+}
+
+.objective-item.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}

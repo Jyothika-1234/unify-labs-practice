@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">☯️ Web Development</div>
+                <div class="progress-info">
+                    <span>159 / 185 DONE</span>
+                    <span class="percentage">86%</span>
+                </div>
+                <div class="progress-bar"><div class="fill" style="width: 86%;"></div></div>
+            </div>
+            <nav class="course-list">
+                <div class="course-item active">
+                    <span class="step-number">24</span>
+                    <div class="course-text">
+                        <p>Mastering CRUD Part 1</p>
+                        <span class="xp-tag">⚡ 93 XP</span>
+                    </div>
+                </div>
+                <ul class="sub-steps">
+                    <li class="done">Adding New Documents</li>
+                    <li class="done">Knowledge Check</li>
+                    <li class="done">Finding Documents</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="hero-card">
+                <div class="tags">
+                    <span class="tag">CRUD Operations</span>
+                    <span class="tag outline">Intermediate</span>
+                </div>
+                <h1>Data Architect: Building The Shop</h1>
+                <p>Start building the data layer for a modern E-commerce shop. Practice creating complex document structures.</p>
+            </section>
+
+            <section class="learning-objectives">
+                <h3>🎯 Learning Objectives</h3>
+                <ul>
+                    <li>Use <code>insertMany()</code> to add 5 products</li>
+                    <li>Implement nested objects for 'specs'</li>
+                    <li>Perform a sort to find expensive products</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="activity-panel">
+            <div class="profile">
+                <div class="avatar">VJ</div>
+                <div class="name">Vemparala Jyoth... <span class="pro">PRO</span></div>
+            </div>
+            <div class="stats-card">
+                <div class="stat">
+                    <span>STREAK</span>
+                    <p>23 Days</p>
+                </div>
+                <div class="stat">
+                    <span>TOTAL XP</span>
+                    <p>2271 XP</p>
+                </div>
+                <div class="curriculum-grid" id="calendar">
+                    </div>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

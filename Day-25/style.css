@@ -1,0 +1,100 @@
+:root {
+  /* Color Palette */
+  --bg-dark: #0f0f0f;
+  --card-bg: #1a1a1a;
+  --header-gradient: linear-gradient(135deg, #f34b06, #a12301);
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --success-green: #22c55e;
+  --border-color: #334155;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 850px;
+}
+
+/* --- Header Section --- */
+.header-banner {
+  background: var(--header-gradient);
+  padding: 40px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tag-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.pill-tag {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* --- Content Cards --- */
+.content-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* --- List Styling --- */
+.objective-list {
+  list-style: none;
+  padding: 0;
+}
+
+.objective-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: var(--text-muted);
+}
+
+.objective-item::before {
+  content: '✓';
+  color: var(--success-green);
+  font-weight: bold;
+}
+
+/* --- Nested Requirements --- */
+.requirement-sub-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.requirement-sub-box h4 {
+  margin-top: 0;
+  color: var(--text-main);
+}

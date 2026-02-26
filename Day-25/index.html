@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Manager: Inventory Control</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-orange: #d35400;
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Header Card */
+        .header-card {
+            background: linear-gradient(135deg, #e67e22, #c0392b);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        /* Objectives & Project Sections */
+        .section-card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        h2 { color: var(--text-main); font-size: 1.5rem; }
+        
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            color: var(--text-dim);
+        }
+
+        .check-icon { color: #2ecc71; margin-right: 15px; }
+
+        .btn-group { margin-top: 20px; }
+        
+        button {
+            background: var(--accent-orange);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover { background: #e67e22; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-card">
+        <div>
+            <span class="badge">Advanced CRUD</span>
+            <span class="badge">Intermediate+</span>
+        </div>
+        <h1>Shop Manager: Inventory Control</h1>
+        <p>Upgrade your shop inventory logic. Implement mass price increases and stock management.</p>
+    </div>
+
+    <div class="section-card">
+        <h2>🎯 Learning Objectives</h2>
+        <div class="list-item"><span class="check-icon">✓</span> Use $inc to update stock levels</div>
+        <div class="list-item"><span class="check-icon">✓</span> Update category names using $set</div>
+        <div class="list-item"><span class="check-icon">✓</span> Use deleteMany() to clear zero stock</div>
+    </div>
+
+    <div class="section-card">
+        <h2>Project Actions</h2>
+        <div class="btn-group">
+            <button onclick="runUpdate()">Increase Electronics Price (+10)</button>
+            <button onclick="runCleanup()" style="background:#555;">Clear Zero Stock</button>
+        </div>
+        <p id="status" style="margin-top:15px; color: #2ecc71;"></p>
+    </div>
+</div>
+
+<script>
+    async function runUpdate() {
+        const res = await fetch('/api/inventory/increase-price?category=Electronics&amount=10', { method: 'POST' });
+        document.getElementById('status').innerText = "Prices updated successfully!";
+    }
+
+    async function runCleanup() {
+        const res = await fetch('/api/inventory/cleanup', { method: 'DELETE' });
+        document.getElementById('status').innerText = "Out-of-stock items removed!";
+    }
+</script>
+
+</body>
+</html>

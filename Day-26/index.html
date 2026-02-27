@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">☯ Web Development</div>
+            <div class="progress-info">
+                <span>168 / 185 DONE</span>
+                <div class="progress-bar"><div class="fill" style="width: 91%;"></div></div>
+            </div>
+            <nav class="course-tree">
+                <div class="item completed">✔ Cursors & Fetching</div>
+                <div class="item completed">✔ Finding Documents</div>
+                <button class="submit-btn">Submit Assignment</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="hero-card">
+                <div class="tags">
+                    <span class="tag">Application Connection</span>
+                    <span class="tag">Intermediate+</span>
+                </div>
+                <h1>Backend Bridge: Connecting Your App</h1>
+                <p>Stop working in the terminal. Today you will write a Node.js script that connects to your local MongoDB server...</p>
+            </header>
+
+            <section class="learning-objectives">
+                <h3>🎯 Learning Objectives</h3>
+                <ul>
+                    <li>Initialize a new Node.js project</li>
+                    <li>Establish a successful handshake</li>
+                    <li>Fetch products from 'unify_labs'</li>
+                    <li>Implement error handling</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="activity-panel">
+            <div class="user-profile">
+                <div class="avatar">VJ</div>
+                <div class="user-meta">
+                    <strong>Vemparala Jyoth...</strong>
+                    <span class="pro-badge">PRO</span>
+                </div>
+            </div>
+            
+            <div class="stats-card">
+                <div class="streak">🔥 25 Days</div>
+                <div class="xp">2454 XP</div>
+            </div>
+
+            <div class="calendar-grid" id="calendar">
+                </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

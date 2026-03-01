@@ -1,0 +1,37 @@
+<header class="navbar">
+  <div class="logo">TITAN</div>
+  <input type="text" id="searchInput" placeholder="Search products...">
+  <button id="cartBtn">
+    🛒 Cart (<span id="cartCount">0</span>)
+  </button>
+</header>
+
+<section class="hero">
+  <h1>Shop Smarter. Checkout Faster.</h1>
+  <p>Instant search • Category browsing • Persistent cart</p>
+</section>
+
+<section class="controls">
+  <div class="categories">
+    <button data-category="all">All</button>
+    <button data-category="electronics">Electronics</button>
+    <button data-category="fashion">Fashion</button>
+    <button data-category="home">Home</button>
+    <button data-category="grocery">Grocery</button>
+  </div>
+
+  <select id="sortSelect">
+    <option value="default">Sort</option>
+    <option value="low">Price: Low → High</option>
+    <option value="high">Price: High → Low</option>
+  </select>
+</section>
+
+<section id="productGrid" class="product-grid"></section>
+
+<div id="cartSidebar" class="cart-sidebar">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <h3>Total: ₹<span id="totalAmount">0</span></h3>
+  <button id="closeCartBtn">Close</button>
+</div>

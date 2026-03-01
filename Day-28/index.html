@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Architect Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <header class="hero-card">
+        <div class="badge-container">
+            <span class="badge">Cloud Deployment</span>
+            <span class="badge">Advanced</span>
+        </div>
+        <h1>Data Architect: Scaling to the Cloud</h1>
+        <p>The final frontier. Your mission is to migrate your shop's data to the cloud. You will setup an Atlas cluster, configure security, and update your Node.js application to use a global connection string.</p>
+    </header>
+
+    <section class="content-card">
+        <div class="card-title">
+            <span class="icon">🎯</span>
+            <h2>Learning Objectives</h2>
+        </div>
+        <ul class="checklist" id="objectiveList">
+            <li>Create a free tier cluster on MongoDB Atlas</li>
+            <li>Configure Network Access (0.0.0.0/0 or specific IP)</li>
+            <li>Create a database user with Read/Write access</li>
+            <li>Update your <code>db.js</code> file with the new Atlas SRV string</li>
+            <li>Verify data flow by fetching products from the cloud</li>
+        </ul>
+    </section>
+
+    <section class="content-card">
+        <div class="card-title">
+            <span class="icon">📋</span>
+            <h2>Project Requirements</h2>
+        </div>
+        <div class="requirements-box">
+            <h3>Atlas Setup</h3>
+            <ul>
+                <li>Register at mongodb.com/atlas.</li>
+                <li>Build a 'Shared Cluster' (M0).</li>
+                <li>Add a Database User and save the password.</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
